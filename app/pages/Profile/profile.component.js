@@ -1,19 +1,22 @@
 import { Page } from "../../core/Page.js";
 
-// @Page({
-//   template: "./profile.template.html"
-// })
 export class ProfilePage extends Page {
 
+  // Constructeur du composant, définit les variables accessibles depuis le template
   constructor(...args){
     super(...args);
 
-    this.firstname = "Matthias";
-    this.lastname = "Gaudin";
+    this.MonTitre = "My Title";
+    this.message = "HelloWorld";
   }
   
   onLoad(){
-    // this.$root.querySelector('.profile-name').textContent = "Blabli";
+    console.log("Profile has loaded")
+
+    const $btn = this.$root.querySelector("#my-btn");
+    $btn.addEventListener("click", function(){
+      alert("Hello World")
+    });
   }
 
 }

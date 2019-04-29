@@ -1,8 +1,8 @@
 export class Router {
 
-  constructor(routes){
+  constructor(routes, $rootEl){
     this.routes = routes;
-    this.$rootEl = document.getElementById('app');
+    this.$rootEl = $rootEl;
 
     this.init();
   }
@@ -46,6 +46,9 @@ export class Router {
 
     const $root = this.$rootEl;
     $root.innerHTML = tpl;
+
+    if(!route.component){ return; }
+
     const component = new route.component($root, tpl);
     $root.$scope = component;
 

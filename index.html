@@ -3,16 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="app/app.css" rel="stylesheet"/>
     <title>Vanilla SPA</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#profile">Profil</a></li>
-      </ul>
-    </nav>
-    <main id="app"></main>
+    <app-menu></app-menu>
+
+    <!-- C'est dans ce block que se placeront nos pages (id="app") -->
+    <main id="mon-app"></main>
+
     <script src="app/app.js" type="module"></script>
   </body>
 </html>
