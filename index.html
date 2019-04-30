@@ -1,16 +1,19 @@
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Le fichier de style global de l'application -->
     <link href="app/app.css" rel="stylesheet"/>
     <title>Vanilla SPA</title>
   </head>
   <body>
-    <app-menu></app-menu>
-
-    <!-- C'est dans ce block que se placeront nos pages (id="app") -->
+    <!-- C'est dans ce block que se placeront nos pages (id="mon-app") -->
     <main id="mon-app"></main>
+
+    <!-- Exemple de composant (ici en dehors de notre main) -->
+    <app-footer></app-footer>
 
     <script src="app/app.js" type="module"></script>
   </body>

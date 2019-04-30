@@ -22,5 +22,7 @@ export class Page {
     this.$root.innerHTML = templated;
   }
 
-
+  onLoad(){
+    
+  }
 }

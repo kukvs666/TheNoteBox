@@ -27,12 +27,12 @@ export class Router {
           return route;
         }
       }
-    }else{
-      for(let i = 0; i < this.routes.length; ++i){
-        const route = this.routes[i];
-        if(route.isDefault()){
-          return route;
-        }
+    }
+    
+    for(let i = 0; i < this.routes.length; ++i){
+      const route = this.routes[i];
+      if(route.isDefault()){
+        return route;
       }
     }
 

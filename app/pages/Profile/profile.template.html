@@ -1,10 +1,15 @@
+<!-- Exemple de composant (ici à l'intérieur d'une page) -->
 <app-nav></app-nav>
 
+<!-- 
+    Exemple d'utilisation de data binding: 
+    Ces valeurs entre double accolades seront remplacées par les valeurs du composant lors de sa création.
+-->
 <h1>{{ MonTitre }}</h1>
 
 <p>
     {{ message }}
 </p>
 
-<span class="profile-name"></span>
-<button id="my-btn">Click-me</button>
+<!-- Les clics sur ce bouton seront bindés dans la méthode onLoad de notre ProfilePage -->
+<button class="alert-btn">Click-me</button>
