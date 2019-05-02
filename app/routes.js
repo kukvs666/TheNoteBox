@@ -24,5 +24,9 @@ export const routes = [
     {
         path: "login",
         view: "app/pages/Login/login.template.html"
+    },
+    {
+        path: "complex",
+        view: "app/pages/ComplexComponent/complex-page.template.html"
     }
 ];
