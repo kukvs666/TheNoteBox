@@ -12,7 +12,7 @@ export class Route {
   }
 
   isDefault(){
-    return this.isDefault;
+    return this.default;
   }
 
   async getTemplate(){

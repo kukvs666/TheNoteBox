@@ -5,7 +5,7 @@ import { components as componentsData } from './components.js';
 
 /* Création des routes */
 const routes = routesData.map(function(routedata){
-  return new Route(routedata.path, routedata.view, routedata.controller, !!routedata.default)
+  return new Route(routedata.path, routedata.view, routedata.controller, !!routedata.isDefault)
 });
 
 let $app = document.getElementById('mon-app');
