@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">{{titrePost}}
+    </div>
+    <div class="card-body post-body">
+        <div class="card-title">{{titreContenu}}</div>
+        <p>{{contenu}}</p>
+        <div class="card post-card-footer">
+            <div class="row no-grutter post-footer-row">
+                <div class="col-2">
+                    <img class="card-img post-img-footer" src="app/img/Missing_avatar.svg" alt="test de remplaceemnt">
+                </div>
+                <div class="col-10">
+                    <div class="card-body post-footer-body">
+                        <h2 class="card-title">{{profilName}}</h2>
+                        <p>{{dateCreation}}</p>
+                        <button type="button" class="btn btn-outline-info btn-sm">{{SEA-001}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <app-parent-comment></app-parent-comment>
+        <app-child-comment></app-child-comment>
+    </div>
+</div>
+

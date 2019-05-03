@@ -5,9 +5,8 @@ export class ComponentRegistry {
 ComponentRegistry.register = (cmpData) => {
   const tagName = "app-"+cmpData.tagName;
   const templatePath = "app/components/"+cmpData.templatePath;
-  const bUseShadow = cmpData.shadow || false;
 
-  const Component = ComponentRegistry.declareTemplatedComponentClass(templatePath, bUseShadow);
+  const Component = ComponentRegistry.declareTemplatedComponentClass(templatePath);
   customElements.define(tagName, Component);
 }
 
@@ -15,17 +14,12 @@ ComponentRegistry.registerAll = (componentsData) => {
     (componentsData || []).forEach(cmp => ComponentRegistry.register(cmp));
 }
 
-ComponentRegistry.declareTemplatedComponentClass = (templatePath, bUseShadow) => {
+ComponentRegistry.declareTemplatedComponentClass = (templatePath) => {
 	class Component extends HTMLElement {
     constructor(){
       super();
 
       this.templatePath = templatePath;
-
-      this.bUseShadow = bUseShadow;
-      if(this.bUseShadow){
-        this.attachShadow({ mode: "open" });
-      }
     }
 
     async getTemplate(){
@@ -44,24 +38,7 @@ ComponentRegistry.declareTemplatedComponentClass = (templatePath, bUseShadow) =>
 
     connectedCallback(){
       this.getTemplate().then(() => {
-        const regx = /\{\{([\s\S]*?)\}\}/g;
-
-        // Replace every occurence of data binding via {{ key }} blocks with this[key]
-        const templated = this.templateHTML.replace(regx, (occurence, capture) => {
-          let key = capture.trim();
-          let value = this.getAttribute(key);
-          if(value){
-              return value;
-          }
-          return occurence;
-        });
-        
-        if(this.bUseShadow){
-          this.shadowRoot.innerHTML = templated;
-        }else{
-          this.innerHTML = templated;
-        }
-        
+        this.innerHTML = this.templateHTML;
       })
     }
 

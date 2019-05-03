@@ -1,1 +1,166 @@
 /* Le CSS pour tous mes composants et pages */
+
+/* Navbar */
+
+.nav.nav-pills {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-link {
+    padding: 0 0;
+}
+
+.nav-link.active {
+    padding: .5rem 1rem;
+}
+
+.The {
+    font-size: 30px;
+    font-style: normal;
+    font-family: 'Concert One', cursive;
+    color: #34C7FF;
+}
+
+.Note {
+    font-size: 30px;
+    font-style: normal;
+    font-family: 'Concert One', cursive;
+    color: black;
+}
+
+.Box {
+    font-size: 30px;
+    font-style: normal;
+    font-family: 'Concert One', cursive;
+    color: #CDDC39;
+}
+
+.navbar-brand em {
+    line-height: 18px;
+    display: inline-table;
+}
+
+.nav-link.disconnect {
+    padding: 0;
+}
+
+.separator {
+    border: 1px solid #D1D1D1;
+    margin: 0.25em .5em;
+    height: 40px;
+}
+
+@media screen and (max-width: 990px) {
+    .navbar-collapse.show .nav.nav-pills {
+        align-items: unset;
+        flex-direction: column;
+    }
+    .navbar-collapse.show .nav-item.separator {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+/* login page */
+
+body {
+    background: #34C7FF;
+}
+
+.login-page {
+    position: relative;
+    top: 150px;
+    width: 350px;
+    height: 397.6px;
+    padding: 20px;
+    background: #CDDC39;
+    left: calc(50vw - 175px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.connexion {
+    margin-top: auto;
+}
+
+.white-link {
+    color: #fff;
+}
+
+/* cards */
+
+.popover {
+    position: relative;
+}
+
+.bs-popover-auto[x-placement^="right"]>.arrow,
+.bs-popover-right>.arrow {
+    top: 40%;
+}
+
+.bs-popover-right>.arrow::before {
+    border-right-color: #FFB224;
+}
+
+.bs-popover-bottom>.arrow::before {
+    border-bottom-color: #FFB224;
+}
+
+.popover {
+    max-width: unset;
+    border-color: #FFB224;
+}
+
+.card-header {
+    background-color: #CDDC39;
+}
+
+.card-footer {
+    background-color: #F0F0F0;
+}
+
+.post-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card-footer {
+    margin-top: auto;
+    max-height: 100px;
+}
+
+.post-footer-body>* {
+    margin: auto 0;
+}
+
+.post-card-footer .card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-footer-row {
+    align-items: center;
+}
+
+.post-img-footer {
+    max-height: 100px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+app-child-comment {
+    max-width: 85vw;
+    align-self: end;
+    min-width: 85vw;
+}
+

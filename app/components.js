@@ -3,16 +3,12 @@
  * 
  * + tagName       {string}        Le nom de la balise html que vous voulez créer. 
  *                                 Le nom final sera automatiquement préfixé par "app-".
- * 
  * + templatePath  {string}        Le nom du fichier de template associé à votre composant.
- *                                 Ce fichier doit se trouver dans le répertoire "app/components".
- * 
- * + shadow        {boolean}       Le composant utilisera le shadow dom si cette valeur est présente et vaut true.
- *                                 Vous devez activer cette option si vous souhaitez utiliser les slots dans votre composant.
+ *                                 Ce fichier doit se trouver dans le répertoire "app/components"
  * */
 export const components = [
     {
-        tagName: "nav",
+        tagName: "navbar",
         templatePath: "navbar.template.html"
     },
     {
@@ -20,8 +16,19 @@ export const components = [
         templatePath: "footer.template.html"
     },
     {
-        tagName: "complex",
-        templatePath: "complex-comp.template.html",
-        shadow: true
-    }
+        tagName: "card",
+        templatePath: "card.template.html"
+    },
+    {
+        tagName: "parent-comment",
+        templatePath: "parent-comment.template.html"
+    },
+    {
+        tagName: "child-comment",
+        templatePath: "child-comment.template.html"
+    },
+    {
+        tagName: "tagbar",
+        templatePath: "tagbar.template.html"
+    },
 ];
